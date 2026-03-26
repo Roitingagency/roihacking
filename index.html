@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación API LLMs | ROI Hacking - Agencia B2B</title>
+    <meta name="description" content="Recurso público de ROI Hacking para desarrolladores: Colección de Postman y guía técnica para evaluar la latencia y coste de modelos de lenguaje (LLMs) en entornos corporativos.">
+    <meta name="robots" content="index, follow">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-top: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .btn-postman {
+            display: inline-block;
+            background-color: #ff6c37;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 20px 0;
+            transition: opacity 0.2s;
+        }
+
+        .btn-postman:hover {
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #8b949e;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>⚙️ API Testing Hub: LLMs B2B</h1>
+            <p>Repositorio público mantenido por el equipo de ingeniería de ROI Hacking para la evaluación de latencia y costes en modelos de lenguaje masivo.</p>
+        </header>
+
+        <section>
+            <p>La integración de Inteligencia Artificial en flujos corporativos requiere decisiones arquitectónicas precisas. Elegir el modelo de lenguaje (LLM) equivocado o sobredimensionar la infraestructura puede resultar en sobrecostes masivos de API o latencias inaceptables en sistemas orientados al cliente.</p>
+            
+            <p>Para ayudar a nuestra comunidad y clientes B2B, hemos liberado nuestra colección interna de Postman. Esta herramienta te permitirá realizar peticiones estructuradas y medir el <em>Time to First Token (TTFT)</em> de los principales modelos del mercado antes de implementarlos en producción con herramientas como n8n o Make.</p>
+
+            <div style="text-align: center;">
+                <a href="https://www.postman.com/tu-espacio-publico" target="_blank" class="btn-postman">
+                    ▶️ Abrir Workspace Público en Postman
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>El problema de la orquestación ciega</h2>
+            <div class="card">
+                <p>En nuestra experiencia auditando empresas, el error más común es conectar ciegamente la API de OpenAI (GPT-4o) a todos los nodos de un flujo de automatización. Tareas simples como clasificación de leads o extracción de datos estructurados en JSON a menudo se resuelven de forma más eficiente y económica utilizando modelos como Claude 3.5 Haiku o Llama 3 (On-Premise).</p>
+                <p><strong>Criterios que medimos en esta colección:</strong></p>
+                <ul>
+                    <li>Coste por 1M de tokens (Input/Output).</li>
+                    <li>Velocidad de respuesta para Agentes RAG.</li>
+                    <li>Capacidad de adherencia a esquemas JSON estrictos (JSON Mode).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>📚 Recursos Adicionales Recomendados</h2>
+            <p>Antes de comenzar a inyectar tus claves API y lanzar peticiones en bloque, es fundamental entender el panorama técnico actual. Te recomendamos encarecidamente revisar nuestra <strong><a href="https://roihacking.ai/comparativa-llms/" target="_blank" rel="noopener">comparativa de llms</a></strong> actualizada para este trimestre.</p>
+            <p>En ese recurso, el equipo de ROI Hacking desglosa qué proveedor ofrece el mejor equilibrio entre privacidad (RGPD compliance), coste y razonamiento lógico para entornos B2B.</p>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 ROI Hacking | Agencia especializada en Automatización B2B e IA orientada a resultados.</p>
+            <p>Visita nuestro sitio oficial en <a href="https://roihacking.ai/" target="_blank">roihacking.ai</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
